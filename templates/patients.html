@@ -6,6 +6,21 @@
     <title>patients</title>
 </head>
 <body>
-    patients
+    <h1>New Pateint</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="enter the name of the pateint">
+        <br>
+        
+        <label for="gender">male</label>
+        <input type="radio" name="gender" value="M">
+        
+        <label for="gender">female</label>
+        <input type="radio" name="gender" value="F">
+        <br>
+
+        <input type="text" name="disease" placeholder="disease">
+        <button type="submit">save</button>
+    </form>
 </body>
 </html>
